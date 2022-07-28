@@ -1,10 +1,10 @@
-def generate_file(filename, dbname) :
+def generate_file(filename, dbname, timing, scaling) :
     file_shell = filename+".sh"
     db_drop_command = f'dropdb {dbname}'
     db_create_command = f'createdb {dbname}'
-    scaling_command = f"pgbench -s 50 -i {dbname}"
-    timing_command = f"pgbench -c 10 -j 2 -t 10000 {dbname}"
-    echo_command = f'''echo '$pgbench -c 10 -j 2 -t 10000 {dbname}' '''
+    scaling_command = f"pgbench -s {scaling} -i {dbname}"
+    timing_command = f"pgbench -c 10 -j 2 -t {timing} {dbname}"
+    echo_command = f'''echo '$pgbench -c 10 -j 2 -t {timing} {dbname}' '''
     exit_command = 'exit 0'
 
     with open(file_shell,"wt") as file :

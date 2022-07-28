@@ -8,5 +8,7 @@ def index(request):
 def file_scripting(request):
     filename = request.POST.get('filename')
     dbname = request.POST.get('databasename')
-    file = generate_file(filename, dbname)
+    timing = request.POST.get('timing')
+    scaling = request.POST.get('scaling')
+    file = generate_file(filename, dbname, timing, scaling)
     return redirect('index')
