@@ -1,3 +1,5 @@
+import os
+
 def generate_file(filename, dbname, timing, scaling) :
     file_shell = filename+".sh"
     db_drop_command = f'dropdb {dbname}'
@@ -17,4 +19,11 @@ def generate_file(filename, dbname, timing, scaling) :
 
     return file_shell
 
+def execute_file(file) :
+    output_data = []
+    os.system(f'bash {file} > output.txt')
+    with open('output.txt', 'rt') as file :
+        for line in file :
+            output_data.append(line)
 
+    return output_data

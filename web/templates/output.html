@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="col-8">
+    <ul>
+        {%for line in output %}
+            <li> {{ line }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock content %}
