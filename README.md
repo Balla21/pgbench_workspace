@@ -8,7 +8,7 @@ This application is implemented using Python 3 with the Django framework along w
 
 ## Requirements
 
-This application requires Python3, pip and the Postgres running in the background.
+This application requires Python3, pip and the Postgres.
 
 ## Installation
 Run all commands from the root directory. It is highly recommended to set up the application in a Python 3 Virtual Environment. The use of the pycharm IDE is highly recommended for this step.
@@ -21,7 +21,7 @@ pip3 install -r requirements.txt
 
 ## Running
 
-Once installation is complete, run the following command at the root of your project .
+Once installation is complete and Postgres running in the background, run the following command at the root of your project .
 The server will run on port 8000 by default on localhost.
 
 ```commandline
@@ -38,8 +38,8 @@ Clicking on the button "Pgbench scripting" will generate a modal with a form for
 </p>
 
 <p align="center">
-    Upon form input validation and submitting the data, the output generate from the script should be displayed on another page
-<img width="650" alt="scripting output" src="project_screenshot/output.png">
+    Upon form input validation and submitting the data, the output generate from the script should be displayed on another page.
+    <img width="650" alt="scripting output" src="project_screenshot/output.png">
 </p>
 
 
