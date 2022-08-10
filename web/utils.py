@@ -16,7 +16,6 @@ def generate_file(filename, dbname, timing, scaling) :
         file.writelines(echo_command +'\n')
         file.writelines(timing_command +'\n')
         file.writelines(exit_command)
-
     return file_shell
 
 def execute_file(file) :

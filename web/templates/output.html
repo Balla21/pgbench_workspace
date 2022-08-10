@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="col-8">
-    <ul>
-        {%for line in output %}
-            <li> {{ line }}</li>
-        {% endfor %}
-    </ul>
+    <div class="container-fluid mt-3 mx-2">
+        <h2 class="text-center"><u> Scripting output generated </u></h2>
+    </div>
 
-</div>
+    <div class="col-8">
+        <ul>
+            {%for line in output %}
+                <li> {{ line }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
 
 {% endblock content %}
